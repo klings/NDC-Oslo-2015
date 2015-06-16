@@ -13,7 +13,14 @@ namespace NdcOsloDemo2015.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Xfo()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Csp()
         {
             ViewBag.Message = "Your application description page.";
 

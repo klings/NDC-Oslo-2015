@@ -1,0 +1,12 @@
+﻿<h2>Clickjacking defense demo.</h2>
+
+<p>This page loads several frames with different types of ClickJacking protection.</p>
+
+<h3>No protection</h3>
+<iframe src="@Url.Action("Index", "Frame")" width="600"></iframe>
+
+<h3>X-Frame-Options</h3>
+<iframe src="@Url.Action("Xfo", "Frame")" width="600"></iframe>
+
+<h3>CSP frame-ancestors</h3>
+<iframe src="@Url.Action("Csp", "Frame")" width="600"></iframe>
