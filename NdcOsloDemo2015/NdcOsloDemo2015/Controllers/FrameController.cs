@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using NdcOsloDemo2015.Models;
+using NdcOsloDemo2015.ViewModels;
 using NWebsec.Mvc.HttpHeaders;
 using NWebsec.Mvc.HttpHeaders.Csp;
 

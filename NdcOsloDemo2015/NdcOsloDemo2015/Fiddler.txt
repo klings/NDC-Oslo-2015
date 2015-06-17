@@ -1,0 +1,10 @@
+﻿This Fiddler rule goes in OnBeforeRequest in the Fiddler rules.
+
+
+        if (!oSession.HTTPMethodIs("CONNECT") && oSession.HostnameIs("ndcdemo.nwebsec.com"))
+        {
+            if (!oSession.isHTTPS)
+            {
+                oSession.fullUrl = ("https://" + oSession.url);
+            }
+        }

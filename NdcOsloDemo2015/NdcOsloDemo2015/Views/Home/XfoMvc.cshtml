@@ -1,0 +1,12 @@
+﻿<h2>MVC 5 - XFO</h2>
+
+<p>This form includes the AntiForgeryToken, and will by default emit the XFO header.</p>
+
+@using (Html.BeginForm())
+{
+    <input type="hidden" value="hello"/>
+    <input type="text" name="sometext"/>
+    @Html.AntiForgeryToken()
+    <br /><br />
+    <input type="submit" value="Submit" />
+}

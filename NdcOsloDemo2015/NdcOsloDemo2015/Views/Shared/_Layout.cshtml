@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - NDC Demo</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -20,10 +20,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Xfo", "Xfo", "Home")</li>
                     <li>@Html.ActionLink("Csp", "Csp", "Home")</li>
-                    <li>@Html.ActionLink("Tls", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Xfo", "Xfo", "Home")</li>
+                    <li>@Html.ActionLink("XfoMvc", "XfoMvc", "Home")</li>
+                    <li>@Html.ActionLink("TLS", "Tls", "Home")</li>
+                    <li>@Html.ActionLink("TlsRequireHttps", "TlsRequireHttps", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -37,7 +38,7 @@
         <hr />
         <footer>
             Project site: <a href="https://github.com/NWebsec/NWebsec">github.com/NWebsec/NWebsec</a><br />
-            Demo site: <a href="https://www.nwebse.com.com/NWebsec/NWebsec">www.nwebsec.com</a>
+            Demo site: <a href="https://www.nwebsec.com/NWebsec/NWebsec">www.nwebsec.com</a>
         </footer>
     </div>
 

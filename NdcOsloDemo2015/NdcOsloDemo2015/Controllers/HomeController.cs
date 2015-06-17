@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using NdcOsloDemo2015.ViewModels;
+using NWebsec.Mvc.HttpHeaders.Csp;
 
 namespace NdcOsloDemo2015.Controllers
 {
@@ -15,23 +13,43 @@ namespace NdcOsloDemo2015.Controllers
 
         public ActionResult Xfo()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
+        public ActionResult XfoMvc()
+        {
+            return View();
+        }
+
+        //[Csp, CspDefaultSrc(None = true)]
+        //[Csp, CspDefaultSrc(Self = true)]
+        //[CspStyleSrc(Self = true, UnsafeInline = true)]
+        //[CspScriptSrc(Self = true, UnsafeInline = true)]
         public ActionResult Csp()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Tls()
         {
-            ViewBag.Message = "Your contact page.";
+            var details = new ConnectionDetails
+            {
+                SecureConnection = Request.IsSecureConnection
+            };
 
-            return View();
+            return View(details);
+        }
+
+        [RequireHttps]
+        public ActionResult TlsRequireHttps()
+        {
+            var details = new ConnectionDetails
+            {
+                RequireHttps = true,
+                SecureConnection = Request.IsSecureConnection
+            };
+
+            return View("Tls",details);
         }
     }
 }

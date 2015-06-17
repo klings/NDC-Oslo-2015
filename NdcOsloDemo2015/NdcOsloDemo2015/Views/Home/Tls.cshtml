@@ -1,7 +1,10 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model NdcOsloDemo2015.ViewModels.ConnectionDetails
 
-<p>Use this area to provide additional information.</p>
+<h2>TLS related headers</h2>
+
+<p>This page shows whether the connection is seen as "secure" by the site.</p>
+
+<p>
+    <b>RequireHttps:</b> @Model.RequireHttps <br/>
+    <b>Request.IsSecureConnection:</b> @Model.SecureConnection
+</p>
