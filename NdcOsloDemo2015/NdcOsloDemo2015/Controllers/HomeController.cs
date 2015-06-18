@@ -30,6 +30,18 @@ namespace NdcOsloDemo2015.Controllers
             return View();
         }
 
+        [Csp, CspDefaultSrc(Self = true), CspScriptSrc(Self = true), CspStyleSrc(Self = true, UnsafeInline = true)]
+        [CspBaseUri(None = true)]
+        [CspChildSrc(None = true)]
+        [CspFormAction(None = true)]
+        [CspFrameAncestors(None = true)]
+        [CspPluginTypes(MediaTypes = "application/pdf")]
+        [CspSandbox]
+        public ActionResult Csp2()
+        {
+            return View();
+        }
+
         public ActionResult Tls()
         {
             var details = new ConnectionDetails
@@ -49,7 +61,7 @@ namespace NdcOsloDemo2015.Controllers
                 SecureConnection = Request.IsSecureConnection
             };
 
-            return View("Tls",details);
+            return View("Tls", details);
         }
     }
 }

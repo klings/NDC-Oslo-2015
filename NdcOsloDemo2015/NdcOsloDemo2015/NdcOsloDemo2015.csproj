@@ -196,6 +196,7 @@
     <Content Include="Views\Home\Xfo.cshtml" />
     <Content Include="Views\Frame\Frame.cshtml" />
     <Content Include="Views\Home\XfoMvc.cshtml" />
+    <Content Include="Views\Home\Csp2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
